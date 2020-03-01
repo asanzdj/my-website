@@ -1,0 +1,119 @@
+.header {
+  .description {
+    text-align: center;
+  }
+}
+
+.about-me {
+  .portrait {
+    height: auto;
+    max-height: 30rem;
+    width: 100%;
+  }
+}
+
+.job-experience {
+  .heading-secondary {
+    color: $primary;
+    display: flex;
+    font-weight: 300;
+    justify-content: flex-end;
+    letter-spacing: 2px;
+  }
+
+  .paragraph {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+.contact-me {
+  position: relative;
+
+  .paragraph {
+    font-size: 1.3rem;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30rem;
+
+    [class^='link-'] {
+      align-items: center;
+      border-radius: 50%;
+      color: $white;
+      cursor: pointer;
+      display: flex;
+      height: 4rem;
+      justify-content: center;
+      width: 4rem;
+    }
+
+    .link-codesandbox {
+      background: $sandbox-color;
+
+      i {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        background: lighten($sandbox-color, 60%);
+
+        i {
+          color: $sandbox-color;
+        }
+      }
+    }
+    .link-linkedin {
+      background: $linkedin-color;
+
+      &:hover {
+        background: lighten($linkedin-color, 40%);
+
+        i {
+          color: $linkedin-color;
+        }
+      }
+    }
+    .link-github {
+      background: $github-color;
+
+      &:hover {
+        background: lighten($github-color, 60%);
+
+        i {
+          color: $github-color;
+        }
+      }
+    }
+    .link-codewars {
+      background: $codewars-color;
+
+      i {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        background: lighten($codewars-color, 40%);
+
+        i {
+          color: $codewars-color;
+        }
+      }
+    }
+    .link-freecodecamp {
+      background: $freecodecamp-color;
+
+      &:hover {
+        background: lighten($freecodecamp-color, 60%);
+
+        i {
+          color: $freecodecamp-color;
+        }
+      }
+    }
+  }
+}
