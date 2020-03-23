@@ -1,3 +1,17 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -10,8 +24,7 @@ html {
 
 body {
   background: #F2F2F0;
-  box-sizing: border-box;
-  padding: 3rem; }
+  box-sizing: border-box; }
 
 body {
   color: #2D2C2A;
@@ -88,75 +101,80 @@ a {
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
 
-.header .description {
-  text-align: center; }
-
-.about-me .portrait {
-  height: auto;
-  max-height: 30rem;
-  width: 100%; }
-
-.job-experience .heading-secondary {
-  color: #12384F;
+.body {
   display: flex;
-  font-weight: 300;
-  justify-content: flex-end;
-  letter-spacing: 2px; }
-
-.job-experience .paragraph {
-  font-size: 1.3rem;
-  text-align: center; }
-
-.contact-me {
-  position: relative; }
-  .contact-me .paragraph {
-    font-size: 1.3rem; }
-  .contact-me .social-links {
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 30rem; }
-    .contact-me .social-links [class^='link-'] {
-      align-items: center;
-      border-radius: 50%;
-      color: #fff;
-      cursor: pointer;
-      display: flex;
-      height: 4rem;
-      justify-content: center;
-      width: 4rem; }
-    .contact-me .social-links .link-codesandbox {
-      background: #040404; }
-      .contact-me .social-links .link-codesandbox i {
-        font-size: 2rem; }
-      .contact-me .social-links .link-codesandbox:hover {
-        background: #9d9d9d; }
-        .contact-me .social-links .link-codesandbox:hover i {
-          color: #040404; }
-    .contact-me .social-links .link-linkedin {
-      background: #2977c9; }
-      .contact-me .social-links .link-linkedin:hover {
-        background: #cadef4; }
-        .contact-me .social-links .link-linkedin:hover i {
-          color: #2977c9; }
-    .contact-me .social-links .link-github {
-      background: #000; }
-      .contact-me .social-links .link-github:hover {
-        background: #999999; }
-        .contact-me .social-links .link-github:hover i {
-          color: #000; }
-    .contact-me .social-links .link-codewars {
-      background: #bb432c; }
-      .contact-me .social-links .link-codewars i {
-        font-size: 2rem; }
-      .contact-me .social-links .link-codewars:hover {
-        background: #f1cac2; }
-        .contact-me .social-links .link-codewars:hover i {
-          color: #bb432c; }
-    .contact-me .social-links .link-freecodecamp {
-      background: #106E29; }
-      .contact-me .social-links .link-freecodecamp:hover {
-        background: #bbf5ca; }
-        .contact-me .social-links .link-freecodecamp:hover i {
-          color: #106E29; }
+  flex-direction: column;
+  height: 100%; }
+  @media only screen and (min-width: 112.5em) {
+    .body {
+      flex-direction: row; } }
+  .body .header .image {
+    background: #12384F;
+    min-height: 35rem;
+    width: 100%; }
+    @media only screen and (min-width: 112.5em) {
+      .body .header .image {
+        width: 70rem;
+        height: 100vh; } }
+  .body .section {
+    margin: 3rem 0;
+    padding: 0 4rem; }
+    .body .section .logo {
+      width: 5rem;
+      height: 5rem; }
+    .body .section .description {
+      font-size: 1.4rem;
+      text-align: center; }
+    .body .section .contact-me {
+      position: relative; }
+      .body .section .contact-me .paragraph {
+        font-size: 1.3rem; }
+      .body .section .contact-me .social-links {
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 30rem; }
+        .body .section .contact-me .social-links [class^='link-'] {
+          align-items: center;
+          border-radius: 50%;
+          color: #fff;
+          cursor: pointer;
+          display: flex;
+          height: 4rem;
+          justify-content: center;
+          width: 4rem; }
+        .body .section .contact-me .social-links .link-codesandbox {
+          background: #040404; }
+          .body .section .contact-me .social-links .link-codesandbox i {
+            font-size: 2rem; }
+          .body .section .contact-me .social-links .link-codesandbox:hover {
+            background: #9d9d9d; }
+            .body .section .contact-me .social-links .link-codesandbox:hover i {
+              color: #040404; }
+        .body .section .contact-me .social-links .link-linkedin {
+          background: #2977c9; }
+          .body .section .contact-me .social-links .link-linkedin:hover {
+            background: #cadef4; }
+            .body .section .contact-me .social-links .link-linkedin:hover i {
+              color: #2977c9; }
+        .body .section .contact-me .social-links .link-github {
+          background: #000; }
+          .body .section .contact-me .social-links .link-github:hover {
+            background: #999999; }
+            .body .section .contact-me .social-links .link-github:hover i {
+              color: #000; }
+        .body .section .contact-me .social-links .link-codewars {
+          background: #bb432c; }
+          .body .section .contact-me .social-links .link-codewars i {
+            font-size: 2rem; }
+          .body .section .contact-me .social-links .link-codewars:hover {
+            background: #f1cac2; }
+            .body .section .contact-me .social-links .link-codewars:hover i {
+              color: #bb432c; }
+        .body .section .contact-me .social-links .link-freecodecamp {
+          background: #106E29; }
+          .body .section .contact-me .social-links .link-freecodecamp:hover {
+            background: #bbf5ca; }
+            .body .section .contact-me .social-links .link-freecodecamp:hover i {
+              color: #106E29; }

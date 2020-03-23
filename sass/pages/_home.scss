@@ -1,117 +1,131 @@
-.header {
-  .description {
-    text-align: center;
-  }
-}
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
-.about-me {
-  .portrait {
-    height: auto;
-    max-height: 30rem;
-    width: 100%;
-  }
-}
-
-.job-experience {
-  .heading-secondary {
-    color: $primary;
-    display: flex;
-    font-weight: 300;
-    justify-content: flex-end;
-    letter-spacing: 2px;
+  @include respond(desktop) {
+    flex-direction: row;
   }
 
-  .paragraph {
-    font-size: 1.3rem;
-    text-align: center;
+  .header {
+    .image {
+      background: #12384F;
+      min-height: 35rem;
+      width: 100%;
+
+      @include respond(desktop) {
+        width: 70rem;
+        height: 100vh;
+      }
+    }
   }
-}
 
-.contact-me {
-  position: relative;
+  .section {
+    margin: 3rem 0;
+    padding: 0 4rem;
 
-  .paragraph {
-    font-size: 1.3rem;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 30rem;
-
-    [class^='link-'] {
-      align-items: center;
-      border-radius: 50%;
-      color: $white;
-      cursor: pointer;
-      display: flex;
-      height: 4rem;
-      justify-content: center;
-      width: 4rem;
+    .logo {
+      width: 5rem;
+      height: 5rem;
     }
 
-    .link-codesandbox {
-      background: $sandbox-color;
+    .description {
+      font-size: 1.4rem;
+      text-align: center;
+    }
 
-      i {
-        font-size: 2rem;
+
+    .contact-me {
+      position: relative;
+
+      .paragraph {
+        font-size: 1.3rem;
       }
 
-      &:hover {
-        background: lighten($sandbox-color, 60%);
+      .social-links {
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 30rem;
 
-        i {
-          color: $sandbox-color;
+        [class^='link-'] {
+          align-items: center;
+          border-radius: 50%;
+          color: $white;
+          cursor: pointer;
+          display: flex;
+          height: 4rem;
+          justify-content: center;
+          width: 4rem;
         }
-      }
-    }
-    .link-linkedin {
-      background: $linkedin-color;
 
-      &:hover {
-        background: lighten($linkedin-color, 40%);
+        .link-codesandbox {
+          background: $sandbox-color;
 
-        i {
-          color: $linkedin-color;
+          i {
+            font-size: 2rem;
+          }
+
+          &:hover {
+            background: lighten($sandbox-color, 60%);
+
+            i {
+              color: $sandbox-color;
+            }
+          }
         }
-      }
-    }
-    .link-github {
-      background: $github-color;
 
-      &:hover {
-        background: lighten($github-color, 60%);
+        .link-linkedin {
+          background: $linkedin-color;
 
-        i {
-          color: $github-color;
+          &:hover {
+            background: lighten($linkedin-color, 40%);
+
+            i {
+              color: $linkedin-color;
+            }
+          }
         }
-      }
-    }
-    .link-codewars {
-      background: $codewars-color;
 
-      i {
-        font-size: 2rem;
-      }
+        .link-github {
+          background: $github-color;
 
-      &:hover {
-        background: lighten($codewars-color, 40%);
+          &:hover {
+            background: lighten($github-color, 60%);
 
-        i {
-          color: $codewars-color;
+            i {
+              color: $github-color;
+            }
+          }
         }
-      }
-    }
-    .link-freecodecamp {
-      background: $freecodecamp-color;
 
-      &:hover {
-        background: lighten($freecodecamp-color, 60%);
+        .link-codewars {
+          background: $codewars-color;
 
-        i {
-          color: $freecodecamp-color;
+          i {
+            font-size: 2rem;
+          }
+
+          &:hover {
+            background: lighten($codewars-color, 40%);
+
+            i {
+              color: $codewars-color;
+            }
+          }
+        }
+
+        .link-freecodecamp {
+          background: $freecodecamp-color;
+
+          &:hover {
+            background: lighten($freecodecamp-color, 60%);
+
+            i {
+              color: $freecodecamp-color;
+            }
+          }
         }
       }
     }
