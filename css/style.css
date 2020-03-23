@@ -122,8 +122,8 @@ a {
     .body .section .logo {
       width: 5rem;
       height: 5rem; }
-    .body .section .description {
-      font-size: 1.4rem;
+    .body .section .about-me .description {
+      font-size: 1.9rem;
       text-align: center; }
     .body .section .contact-me {
       position: relative; }
