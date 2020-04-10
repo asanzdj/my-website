@@ -120,16 +120,21 @@ a {
     .body {
       flex-direction: row; } }
   .body .header .image {
-    background: #12384F;
+    background-image: url("../../img/header.jpg");
+    background-size: cover;
     min-height: 35rem;
-    width: 100%; }
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center; }
     @media only screen and (max-width: 75em) {
       .body .header .image {
         margin-bottom: 3rem; } }
     @media only screen and (min-width: 112.5em) {
       .body .header .image {
         height: 100vh;
-        width: 70rem; } }
+        width: 80rem; }
+        .body .header .image, .body .header .image img {
+          height: 100vh; } }
   .body .section {
     margin: 1rem 0;
     padding: 0 4rem; }
@@ -153,7 +158,17 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 40%; }
+        width: 40%;
+        flex-wrap: wrap; }
+        @media only screen and (max-width: 56.25em) {
+          .body .section .contact-me .social-links {
+            width: 100%; }
+            .body .section .contact-me .social-links .link {
+              height: 4rem;
+              width: 4rem; } }
+        @media only screen and (max-width: 75em) {
+          .body .section .contact-me .social-links {
+            width: 40%; } }
         .body .section .contact-me .social-links .link {
           align-items: center;
           background: #FF6F61;
@@ -167,9 +182,6 @@ a {
           .body .section .contact-me .social-links .link i {
             color: #fff;
             font-size: 2rem; }
-  .body .content {
-    padding-left: 6rem;
-    padding-right: 6rem; }
-    @media only screen and (min-width: 112.5em) {
-      .body .content {
-        margin-top: 20rem !important; } }
+  @media only screen and (min-width: 112.5em) {
+    .body .content {
+      margin-top: 20rem !important; } }
