@@ -13,123 +13,80 @@
       min-height: 35rem;
       width: 100%;
 
+      @include respond(tab-land) {
+        margin-bottom: 3rem;
+      }
+
       @include respond(desktop) {
-        width: 70rem;
         height: 100vh;
+        width: 70rem;
       }
     }
   }
 
   .section {
-    margin: 3rem 0;
+    margin: 1rem 0;
     padding: 0 4rem;
 
     .logo {
-      width: 5rem;
-      height: 5rem;
+      height: 10rem;
+      margin-bottom: 3rem;
+      width: 10rem;
     }
 
-    .about-me {
-      .description {
-        font-size: 1.9rem;
+    .description {
+      font-size: 1.3rem;
+      margin-top: 5rem;
+
+      p {
+        margin-bottom: 2rem;
         text-align: center;
       }
     }
 
-
     .contact-me {
-      position: relative;
+      margin-bottom: 6rem;
 
-      .paragraph {
-        font-size: 1.3rem;
+      .heading-secondary {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 600;
       }
 
       .social-links {
         display: flex;
         justify-content: space-between;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 30rem;
+        align-items: center;
+        width: 40%;
 
-        [class^='link-'] {
+        .link {
           align-items: center;
+          background: $tertiary;
           border-radius: 50%;
-          color: $white;
-          cursor: pointer;
           display: flex;
-          height: 4rem;
+          height: 5rem;
           justify-content: center;
-          width: 4rem;
-        }
+          width: 5rem;
 
-        .link-codesandbox {
-          background: $sandbox-color;
+          &:hover {
+            background: darken($tertiary, 5%);
+          }
 
           i {
+            color: $white;
             font-size: 2rem;
-          }
-
-          &:hover {
-            background: lighten($sandbox-color, 60%);
-
-            i {
-              color: $sandbox-color;
-            }
-          }
-        }
-
-        .link-linkedin {
-          background: $linkedin-color;
-
-          &:hover {
-            background: lighten($linkedin-color, 40%);
-
-            i {
-              color: $linkedin-color;
-            }
-          }
-        }
-
-        .link-github {
-          background: $github-color;
-
-          &:hover {
-            background: lighten($github-color, 60%);
-
-            i {
-              color: $github-color;
-            }
-          }
-        }
-
-        .link-codewars {
-          background: $codewars-color;
-
-          i {
-            font-size: 2rem;
-          }
-
-          &:hover {
-            background: lighten($codewars-color, 40%);
-
-            i {
-              color: $codewars-color;
-            }
-          }
-        }
-
-        .link-freecodecamp {
-          background: $freecodecamp-color;
-
-          &:hover {
-            background: lighten($freecodecamp-color, 60%);
-
-            i {
-              color: $freecodecamp-color;
-            }
           }
         }
       }
+    }
+  }
+
+  .content {
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+    @include respond(desktop) {
+      margin-top: 20rem !important;
     }
   }
 }

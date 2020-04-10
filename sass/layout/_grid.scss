@@ -1,12 +1,18 @@
 .row {
+  @include clearfix();
   margin: 0 auto;
   max-width: $grid-width;
 
-  &:not(:last-child) {
-    margin-bottom: $gutter-vertical;
+  &--center {
+    display: flex;
+    justify-content: center;
   }
 
-  @include clearfix();
+  &--vertical-center {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 
   /*
   ^ -> classes starting with this statement
